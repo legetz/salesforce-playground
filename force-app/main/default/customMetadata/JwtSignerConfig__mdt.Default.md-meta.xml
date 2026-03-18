@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomMetadata
+  xmlns="http://soap.sforce.com/2006/04/metadata"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+>
+    <label>Default</label>
+    <protected>false</protected>
+    <values>
+        <field>AppKey__c</field>
+        <value xsi:type="xsd:string">external-app</value>
+    </values>
+    <values>
+        <field>Audience__c</field>
+        <value xsi:type="xsd:string">https://your-api.example</value>
+    </values>
+    <values>
+        <field>CertificateDeveloperName__c</field>
+        <value xsi:type="xsd:string">Jwt_Signing_Cert</value>
+    </values>
+    <values>
+        <field>FallbackRole__c</field>
+        <value xsi:type="xsd:string">regular</value>
+    </values>
+    <values>
+        <field>IsActive__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Issuer__c</field>
+        <value xsi:type="xsd:string">https://your-company.example</value>
+    </values>
+    <values>
+        <field>TokenLifetimeSeconds__c</field>
+        <value xsi:type="xsd:double">300</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,69 @@
+<template>
+  <lightning-card title="JWT Signer Demo" icon-name="utility:identity">
+    <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+      <p class="slds-m-bottom_small">
+        Generate a JWT for the logged-in Salesforce user using the active signer
+        config and the user's Customer ID value.
+      </p>
+
+      <lightning-button
+        label="Generate JWT"
+        variant="brand"
+        onclick={handleGenerateClick}
+        disabled={isLoading}
+      ></lightning-button>
+
+      <template if:true={isLoading}>
+        <div class="slds-m-top_medium">
+          <lightning-spinner
+            alternative-text="Generating JWT"
+            size="small"
+          ></lightning-spinner>
+        </div>
+      </template>
+
+      <template if:true={errorMessage}>
+        <div class="slds-m-top_medium slds-text-color_error">
+          {errorMessage}
+        </div>
+      </template>
+
+      <template if:true={hasResponse}>
+        <div class="slds-m-top_medium slds-box slds-theme_default">
+          <dl class="slds-list_horizontal slds-wrap">
+            <dt class="slds-item_label slds-truncate" title="App Key">
+              App Key:
+            </dt>
+            <dd class="slds-item_detail slds-truncate">{response.appKey}</dd>
+            <dt class="slds-item_label slds-truncate" title="Subject">
+              Subject:
+            </dt>
+            <dd class="slds-item_detail slds-truncate">{response.subject}</dd>
+            <dt class="slds-item_label slds-truncate" title="Role">Role:</dt>
+            <dd class="slds-item_detail slds-truncate">{response.role}</dd>
+            <dt class="slds-item_label slds-truncate" title="Audience">
+              Audience:
+            </dt>
+            <dd class="slds-item_detail slds-truncate">{response.audience}</dd>
+            <dt class="slds-item_label slds-truncate" title="Issued At">
+              Issued:
+            </dt>
+            <dd class="slds-item_detail slds-truncate">{issuedAtLabel}</dd>
+            <dt class="slds-item_label slds-truncate" title="Expires At">
+              Expires:
+            </dt>
+            <dd class="slds-item_detail slds-truncate">{expiresAtLabel}</dd>
+          </dl>
+        </div>
+
+        <div class="slds-m-top_medium">
+          <lightning-textarea
+            label="Signed JWT"
+            value={response.token}
+            read-only
+          ></lightning-textarea>
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>

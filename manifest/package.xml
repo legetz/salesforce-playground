@@ -5,16 +5,17 @@
         <name>ApexClass</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexComponent</name>
+        <members>User.CustomerId__c</members>
+        <name>CustomField</name>
     </types>
     <types>
         <members>*</members>
-        <name>ApexPage</name>
+        <name>CustomMetadata</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexTestSuite</name>
+        <members>JwtSignerConfig__mdt</members>
+        <members>JwtUserRoleRule__mdt</members>
+        <name>CustomObject</name>
     </types>
     <types>
         <members>*</members>
