@@ -25,7 +25,6 @@
     <types>
         <members>JwtSignerConfig__mdt.Default</members>
         <members>JwtUserRoleRule.Admin_By_Permission_Set</members>
-        <members>JwtUserRoleRule__mdt.Admin_By_Permission_Set</members>
         <name>CustomMetadata</name>
     </types>
     <types>
