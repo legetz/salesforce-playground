@@ -1,15 +1,31 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
+        <members>JwtSignerService</members>
+        <members>JwtSignerServiceTest</members>
         <name>ApexClass</name>
     </types>
     <types>
+        <members>JwtSignerConfig__mdt.AppKey__c</members>
+        <members>JwtSignerConfig__mdt.Audience__c</members>
+        <members>JwtSignerConfig__mdt.CertificateDeveloperName__c</members>
+        <members>JwtSignerConfig__mdt.FallbackRole__c</members>
+        <members>JwtSignerConfig__mdt.IsActive__c</members>
+        <members>JwtSignerConfig__mdt.Issuer__c</members>
+        <members>JwtSignerConfig__mdt.TokenLifetimeSeconds__c</members>
+        <members>JwtUserRoleRule__mdt.AppKey__c</members>
+        <members>JwtUserRoleRule__mdt.IsActive__c</members>
+        <members>JwtUserRoleRule__mdt.MatchType__c</members>
+        <members>JwtUserRoleRule__mdt.Priority__c</members>
+        <members>JwtUserRoleRule__mdt.ResolvedRole__c</members>
+        <members>JwtUserRoleRule__mdt.TargetApiName__c</members>
         <members>User.CustomerId__c</members>
         <name>CustomField</name>
     </types>
     <types>
-        <members>*</members>
+        <members>JwtSignerConfig__mdt.Default</members>
+        <members>JwtUserRoleRule.Admin_By_Permission_Set</members>
+        <members>JwtUserRoleRule__mdt.Admin_By_Permission_Set</members>
         <name>CustomMetadata</name>
     </types>
     <types>
@@ -18,20 +34,12 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexTrigger</name>
+        <members>JWT_signing_test</members>
+        <name>FlexiPage</name>
     </types>
     <types>
-        <members>*</members>
-        <name>AuraDefinitionBundle</name>
-    </types>
-    <types>
-        <members>*</members>
+        <members>jwtSignerDemo</members>
         <name>LightningComponentBundle</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>StaticResource</name>
     </types>
     <version>65.0</version>
 </Package>
